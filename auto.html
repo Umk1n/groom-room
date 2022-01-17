@@ -8,7 +8,7 @@
   <title>GROOMING</title>
 </head>
 <body>
-  <div class="container">
+  <div id="container">
     <header class="header">
       <div class="header__logo">
         <div class="header__logo-title">Grooming</div>
@@ -31,9 +31,9 @@
               <div class="application__form-nav-item active-auto">Войти</div>
               <div class="application__form-nav-item">Регистрация</div>
             </div>
-            <input type="text" class="application__form-input" placeholder="Текстовое поле">
-            <input type="text" class="application__form-input" placeholder="Текстовое поле">
-            <button class="application__form-btn" type="submit">Войти</button>
+            <input type="email" class="application__form-input" v-bind:value="valueEmail" v-on:input="inputEmail" :placeholder="placeholderEmail">
+            <input type="password" class="application__form-input" v-bind:value="valuePassword" v-on:input="inputPassword" :placeholder="placeholderPassword">
+            <button class="application__form-btn" type="button" v-on:click="consoleData">Войти</button>
           </form>
         </div>
       </div>
@@ -42,5 +42,8 @@
       <div class="footer__title">groom-salon.com 2000-2999</div>
     </footer>
   </div>
+
+  <script src="js/vue.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

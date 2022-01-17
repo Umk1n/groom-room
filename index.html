@@ -8,7 +8,7 @@
   <title>GROOMING</title>
 </head>
 <body>
-  <div class="container">
+  <div id="container">
     <header class="header">
       <div class="header__logo">
         <div class="header__logo-title">Grooming</div>
@@ -27,34 +27,22 @@
         <div class="application__right">
           <form action="" class="application__right-form">
             <p class="application__form-title">Создайте заявку</p>
-            <input type="text" class="application__form-input" placeholder="Текстовое поле">
-            <input type="text" class="application__form-input" placeholder="Текстовое поле">
-            <button class="application__form-btn" type="submit">Записаться</button>
+            <input type="text" class="application__form-input" v-bind:value="valueInputName" v-on:input="inputName" v-on:keypress.enter="applicationForm" :placeholder="placeholderName">
+            <input type="text" class="application__form-input" v-bind:value="valueInputService" v-on:input="inputService" v-on:keypress.enter="applicationForm" :placeholder="placeholderService">
+            <button class="application__form-btn" type="button" v-on:click="applicationForm">Записаться</button>
           </form>
         </div>
       </div>
       <div class="store">
         <h3 class="store__title">Наши работы</h3>
         <div class="store__row">
-          <div class="store__row-card">
-            <img src="img/pet/cat.jpg" alt="" class="card-image">
-            <div class="card-title">Кот#1</div>
-          </div>
-          <div class="store__row-card">
-            <img src="img/pet/cat.jpg" alt="" class="card-image">
-            <div class="card-title">Кот#2</div>
-          </div>
-          <div class="store__row-card">
-            <img src="img/pet/cat.jpg" alt="" class="card-image">
-            <div class="card-title">Кот#3</div>
-          </div>
-          <div class="store__row-card">
-            <img src="img/pet/cat.jpg" alt="" class="card-image">
-            <div class="card-title">Кот#4</div>
-          </div>
-          <div class="store__row-card">
-            <img src="img/pet/cat.jpg" alt="" class="card-image">
-            <div class="card-title">Кот#5</div>
+          <div class="store__row-card" v-for="myServices in services">
+            <img :src="myServices.url" alt="" class="card-image">
+            <div class="card-title">{{myServices.name}}</div>
+            <select>
+              <option><div class="card-category">Название услуги: <b>{{myServices.service}}</b></div></option>
+            </select>
+            <div class="card-status">{{myServices.condition}}</div>
           </div>
         </div>
       </div>
@@ -63,5 +51,8 @@
       <div class="footer__title">groom-salon.com 2000-2999</div>
     </footer>
   </div>
+
+  <script src="js/vue.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
