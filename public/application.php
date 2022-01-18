@@ -61,7 +61,5 @@ function changeStatusReceiving($bd, $name, $status) {
     echo "Error: " . $sql . "<br>" . $bd->error;
   }
 }
-createApp('usersTable', '123', '123');
-createReceiving($conn);
 
 ?>

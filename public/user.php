@@ -31,6 +31,5 @@ function authorization($bd, $login, $password) {
     echo 'User undefined';
   }
 }
-register('groom-room','123','123');
 
 ?>
