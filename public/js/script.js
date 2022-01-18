@@ -16,31 +16,31 @@ ready(function() {
         valuePassword: '',
         default: 'В процессе', 
         services: [{
-          url: 'img/pet/onecat.jpg',
+          url: 'public/img/pet/onecat.jpg',
           name: 'OnePunch Cat',
           condition: 'Выполнена',
           service: 'Приукрасить'
         },
         { 
-          url: 'img/pet/catsay.jpg',
+          url: 'public/img/pet/catsay.jpg',
           name: 'SailorMoon Cat',
           condition: 'Выполнена',
           service: 'Приукрасить'
         },
         { 
-          url: 'img/pet/lenicat.jpg',
+          url: 'public/img/pet/lenicat.jpg',
           name: 'Leni Cat',
           condition: 'Выполнена',
           service: 'Приукрасить',
         },
         {
-          url: 'img/pet/coolcat.jpg',
+          url: 'public/img/pet/coolcat.jpg',
           name: 'Cool Cat',
           condition: 'Выполнена',
           service: 'Приукрасить'
         },
         {
-          url: 'img/pet/cat.jpg',
+          url: 'public/img/pet/cat.jpg',
           name: 'Pupsich Cat',
           condition: 'Выполнена',
           service: 'Приукрасить'
@@ -78,7 +78,6 @@ ready(function() {
         this.valueEmail = '';
         this.valuePassword = '';
       }
-
     }
   })
 });

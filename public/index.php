@@ -4,21 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="public/css/style.css">
   <title>GROOMING</title>
 </head>
 <body>
   <div id="container">
-    <header class="header">
-      <div class="header__logo">
-        <div class="header__logo-title">Grooming</div>
-        <div class="header__logo-subtitle">Service for dogs and cats</div>
-      </div>
-      <nav class="header__nav">
-        <a class="header__nav-item active" href="index.html">Главная</a>
-        <a class="header__nav-item" href="auto.html">Вход</a>
-      </nav>
-    </header>
+  <?include 'header.php'; ?>
     <content class="content">
       <div class="application">
         <div class="application__left">
@@ -47,12 +38,10 @@
         </div>
       </div>
     </content>
-    <footer class="footer">
-      <div class="footer__title">groom-salon.com 2000-2999</div>
-    </footer>
+    <?include 'footer.php'; ?>
   </div>
 
-  <script src="js/vue.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="public/js/vue.min.js"></script>
+  <script src="public/js/script.js"></script>
 </body>
 </html>
