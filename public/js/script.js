@@ -56,16 +56,15 @@ ready(function() {
         this.valueInputService = event.target.value;
       },
       applicationForm(){
-        if(this.valueInputName === '' && this.valueInputService === '') {
-          return
+        if(this.valueInputName !== '' && this.valueInputService !== '') {
+          this.services.push({
+            name: this.valueInputName,
+            service: this.valueInputService,
+            condition: this.default
+          });
+          this.valueInputName = '';
+          this.valueInputService = '';
         };
-        this.services.push({
-          name: this.valueInputName,
-          service: this.valueInputService,
-          condition: this.default
-        });
-        this.valueInputName = '';
-        this.valueInputService = '';
       },
       inputEmail(event){
         this.valueEmail = event.target.value;

@@ -61,5 +61,4 @@ function changeStatusReceiving($bd, $name, $status) {
     echo "Error: " . $sql . "<br>" . $bd->error;
   }
 }
-
 ?>

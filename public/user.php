@@ -31,5 +31,4 @@ function authorization($bd, $login, $password) {
     echo 'User undefined';
   }
 }
-
 ?>

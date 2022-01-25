@@ -19,7 +19,12 @@
           <form action="" class="application__right-form">
             <p class="application__form-title">Создайте заявку</p>
             <input type="text" class="application__form-input" v-bind:value="valueInputName" v-on:input="inputName" v-on:keypress.enter="applicationForm" :placeholder="placeholderName">
-            <input type="text" class="application__form-input" v-bind:value="valueInputService" v-on:input="inputService" v-on:keypress.enter="applicationForm" :placeholder="placeholderService">
+            <select class="application__form-input" v-on:input="inputService">
+              <option>Выберите услугу</option>
+              <option>Ноготочки</option>
+              <option>Побрить</option>
+              <option>Покрасить</option>
+            </select>
             <button class="application__form-btn" type="button" v-on:click="applicationForm">Записаться</button>
           </form>
         </div>
@@ -30,9 +35,7 @@
           <div class="store__row-card" v-for="myServices in services">
             <img :src="myServices.url" alt="" class="card-image">
             <div class="card-title">{{myServices.name}}</div>
-            <select>
-              <option><div class="card-category">Название услуги: <b>{{myServices.service}}</b></div></option>
-            </select>
+            <div class="card-category">Название услуги: <b>{{myServices.service}}</b></div>
             <div class="card-status">{{myServices.condition}}</div>
           </div>
         </div>
